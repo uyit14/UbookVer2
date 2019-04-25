@@ -9,5 +9,5 @@
     <color name="gray">#302D2D</color>
     <color name="bgTabActive">#00BCD4</color>
     <color name="bgTabInActive">#888787</color>
-    <color name="bgSignoutButton">#BEBCBC</color>
+    <color name="bgSignoutButton">#D5D1D1</color>
 </resources>
