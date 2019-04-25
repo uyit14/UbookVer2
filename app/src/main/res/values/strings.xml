@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Ubook</string>
+    //signin
+    <string name="start_trying_ubook">Bắt đầu trải nghiệm cùng Ubook</string>
+    <string name="your_phone_number">Số điện thoại của bạn</string>
+    <string name="accept">Tôi đồng ý với</string>
+    <string name="terms_and_conditions">điều kiện và điều khoản sử dụng</string>
+    <string name="continues">Tiếp tục</string>
+    //verify
+    <string name="your_code_sent_to_phone_number">Nhập mã code đã được gửi cho bạn qua số điện thoại:</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="code_not_send">Bạn không nhận được mã code?</string>
+    <string name="resend">Gửi lại mã code</string>
+    //main bottom navigation tab
+    <string name="home">Trang chủ</string>
+    <string name="order">Các đơn hàng</string>
+    <string name="help">Thông báo</string>
+    <string name="account">Tài khoản</string>
+
+    //tab account
+    <string name="account_detail">Chi tiết tài khoản</string>
+    <string name="sign_out">Đăng xuất</string>
+</resources>
