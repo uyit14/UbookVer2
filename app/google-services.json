@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "481420464147",
+    "firebase_url": "https://ubook-3f97b.firebaseio.com",
+    "project_id": "ubook-3f97b",
+    "storage_bucket": "ubook-3f97b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481420464147:android:18dd0c4cd30aecab",
+        "android_client_info": {
+          "package_name": "com.ubook.ubookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481420464147-mglblnb2sb825gju3bufl2q74m8tn4hg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGPawOjLm1BgECVUE6bdqTExyWNS7aai4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481420464147-mglblnb2sb825gju3bufl2q74m8tn4hg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

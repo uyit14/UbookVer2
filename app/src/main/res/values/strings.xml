@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Ubook</string>
+    <string name="google_map_api_key" translatable="false">AIzaSyAVRS_ZQZCiHMvnGhwUNU9wo8MpvSCWr6s</string>
     //signin
     <string name="start_trying_ubook">Bắt đầu trải nghiệm cùng Ubook</string>
     <string name="your_phone_number">Số điện thoại của bạn</string>
