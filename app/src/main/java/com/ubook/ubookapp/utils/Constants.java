@@ -1,4 +1,4 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.utils;
 
 public class Constants {
     public static final int ERROR_DIALOG_REQUEST = 9001;

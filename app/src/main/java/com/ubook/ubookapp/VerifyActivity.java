@@ -15,6 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ubook.ubookapp.base.BaseApplication;
+import com.ubook.ubookapp.helper.CustomFocusChangeListener;
+import com.ubook.ubookapp.helper.UbookHelper;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

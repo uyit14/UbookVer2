@@ -19,7 +19,7 @@ import com.ubook.ubookapp.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.ubook.ubookapp.Constants.MAPVIEW_BUNDLE_KEY;
+import static com.ubook.ubookapp.utils.Constants.MAPVIEW_BUNDLE_KEY;
 
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback {

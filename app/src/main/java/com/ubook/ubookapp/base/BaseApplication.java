@@ -1,6 +1,8 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.base;
 
 import android.app.Application;
+
+import com.ubook.ubookapp.utils.SharedPreferencesUtils;
 
 public class BaseApplication extends Application {
     private static BaseApplication mInstance;

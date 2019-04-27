@@ -1,20 +1,18 @@
 package com.ubook.ubookapp.account;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.ubook.ubookapp.BaseApplication;
+import com.ubook.ubookapp.base.BaseApplication;
 import com.ubook.ubookapp.R;
 import com.ubook.ubookapp.SignInActivity;
-import com.ubook.ubookapp.UbookHelper;
+import com.ubook.ubookapp.helper.UbookHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

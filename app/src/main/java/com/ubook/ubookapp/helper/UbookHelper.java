@@ -1,4 +1,4 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.helper;
 
 import android.app.Activity;
 import android.content.Context;

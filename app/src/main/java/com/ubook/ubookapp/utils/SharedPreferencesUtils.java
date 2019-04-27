@@ -1,4 +1,4 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

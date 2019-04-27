@@ -22,13 +22,14 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.ubook.ubookapp.account.AccountFragment;
+import com.ubook.ubookapp.helper.BottomNavigationBehavior;
 import com.ubook.ubookapp.notify.NotifyFragment;
 import com.ubook.ubookapp.home.HomeFragment;
 import com.ubook.ubookapp.orders.OrdersFragment;
 
-import static com.ubook.ubookapp.Constants.ERROR_DIALOG_REQUEST;
-import static com.ubook.ubookapp.Constants.PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION;
-import static com.ubook.ubookapp.Constants.PERMISSIONS_REQUEST_ENABLE_GPS;
+import static com.ubook.ubookapp.utils.Constants.ERROR_DIALOG_REQUEST;
+import static com.ubook.ubookapp.utils.Constants.PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION;
+import static com.ubook.ubookapp.utils.Constants.PERMISSIONS_REQUEST_ENABLE_GPS;
 
 public class MainActivity extends AppCompatActivity {
 

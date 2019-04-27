@@ -1,4 +1,4 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.helper;
 
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;

@@ -1,8 +1,14 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.splash;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ubook.ubookapp.base.BaseApplication;
+import com.ubook.ubookapp.MainActivity;
+import com.ubook.ubookapp.R;
+import com.ubook.ubookapp.SignInActivity;
+import com.ubook.ubookapp.helper.UbookHelper;
 
 public class SplashActivity extends AppCompatActivity {
     private Thread mThread;
