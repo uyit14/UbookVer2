@@ -24,4 +24,7 @@
     <string name="language">Language</string>
     <string name="sign_out">SignOut</string>
 
+    //tab home
+    <string name="enter_your_location_you_want_arrive">Enter address here</string>
+
 </resources>

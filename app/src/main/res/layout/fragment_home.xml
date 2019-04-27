@@ -3,11 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.HomeFragment">
-
     <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/mvUbook" />
+    <SearchView
+        android:id="@+id/svLocation"
+        android:layout_margin="8dp"
+        android:queryHint="@string/enter_your_location_you_want_arrive"
+        android:background="@drawable/custom_search_bar"
+        android:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
 
 </RelativeLayout>

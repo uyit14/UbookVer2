@@ -22,4 +22,7 @@
     <string name="account_detail">Chi tiết tài khoản</string>
     <string name="language">Ngôn ngữ</string>
     <string name="sign_out">Đăng xuất</string>
+
+    //tab home
+    <string name="enter_your_location_you_want_arrive">Nhập địa chỉ tại đây</string>
 </resources>

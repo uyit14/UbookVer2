@@ -36,6 +36,7 @@
                     android:background="@drawable/custom_signin_input"
                     android:gravity="center_vertical"
                     android:paddingLeft="8dp"
+                    android:maxLines="1"
                     android:layout_margin="16dp"
                     android:drawablePadding="8dp"
                     android:drawableLeft="@drawable/ic_local_phone_black_24dp"
