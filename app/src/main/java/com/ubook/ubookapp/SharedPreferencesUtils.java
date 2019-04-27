@@ -14,6 +14,7 @@ public class SharedPreferencesUtils {
 
     //key
     private static final String ACCESS_TOKEN = "accessToken";
+    private static final String LANGUAGE_CODE = "languageCode";
 
     //
     public SharedPreferencesUtils(Context context) {
@@ -22,7 +23,7 @@ public class SharedPreferencesUtils {
         editor = pref.edit();
     }
 
-    //
+    //token
     public String getAccessToken() {
         return pref.getString(ACCESS_TOKEN, "");
     }
@@ -31,6 +32,17 @@ public class SharedPreferencesUtils {
         editor.putString(ACCESS_TOKEN, accessToken);
         editor.commit();
     }
+
+    //language
+    public String getLanguageCode() {
+        return pref.getString(LANGUAGE_CODE, "");
+    }
+
+    public void setLanguageCode(String languageCode) {
+        editor.putString(LANGUAGE_CODE, languageCode);
+        editor.commit();
+    }
+
     public void signOut() {
         editor.putString(ACCESS_TOKEN, "");
         editor.commit();

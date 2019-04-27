@@ -50,7 +50,7 @@ public class NotifyAdapter extends RecyclerView.Adapter<NotifyAdapter.NotifyView
     }
 
     //
-    public class NotifyViewHolder extends RecyclerView.ViewHolder{
+    public class NotifyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivNotify;
         TextView tvTitle, tvBody;
 
@@ -61,10 +61,11 @@ public class NotifyAdapter extends RecyclerView.Adapter<NotifyAdapter.NotifyView
             tvBody = itemView.findViewById(R.id.tvBody);
 
         }
+
         //
-        public void setOnNotifyitemClick(final OnItemNotifyClickListener onNotifyitemClick, final NotifyData notifyData){
+        public void setOnNotifyitemClick(final OnItemNotifyClickListener onNotifyitemClick, final NotifyData notifyData) {
             itemView.setOnClickListener(v -> {
-                if(onNotifyitemClick!=null){
+                if (onNotifyitemClick != null) {
                     onNotifyitemClick.onItemNotifyClick(notifyData, getAdapterPosition());
                 }
             });

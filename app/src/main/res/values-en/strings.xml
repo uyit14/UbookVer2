@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //sign in
+    <string name="start_trying_ubook">Start trial with Ubook</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="accept">I accept with</string>
+    <string name="terms_and_conditions">terms and condition</string>
+    <string name="continues">Continue</string>
+
+    //verify
+    <string name="your_code_sent_to_phone_number">Enter the verification code sent to you at</string>
+    <string name="confirm">Confirm</string>
+    <string name="code_not_send">Didn\\\'t receive sms verifycation code?</string>
+    <string name="resend">Resend</string>
+
+    //main bottom navigation tab
+    <string name="home">Home</string>
+    <string name="order">Orders</string>
+    <string name="notify">Notify</string>
+    <string name="account">Account</string>
+
+    //tab account
+    <string name="account_detail">Account detail</string>
+    <string name="language">Language</string>
+    <string name="sign_out">SignOut</string>
+
+</resources>

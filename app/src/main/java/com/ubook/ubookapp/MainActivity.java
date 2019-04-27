@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(checkMapServices()){
-            if(mLocationPermissionGranted){
+        if (checkMapServices()) {
+            if (mLocationPermissionGranted) {
                 //
-            }else{
+            } else {
                 getLocationPermission();
             }
         }
@@ -69,27 +69,27 @@ public class MainActivity extends AppCompatActivity {
     //
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
-                Fragment fragment;
-                switch (item.getItemId()) {
-                    case R.id.menu_home:
-                        fragment = new HomeFragment();
-                        loadFragment(fragment);
-                        return true;
-                    case R.id.menu_orders:
-                        fragment = new OrdersFragment();
-                        loadFragment(fragment);
-                        return true;
-                    case R.id.menu_notify:
-                        fragment = new NotifyFragment();
-                        loadFragment(fragment);
-                        return true;
-                    case R.id.menu_account:
-                        fragment = new AccountFragment();
-                        loadFragment(fragment);
-                        return true;
-                }
-                return false;
-            };
+        Fragment fragment;
+        switch (item.getItemId()) {
+            case R.id.menu_home:
+                fragment = new HomeFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.menu_orders:
+                fragment = new OrdersFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.menu_notify:
+                fragment = new NotifyFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.menu_account:
+                fragment = new AccountFragment();
+                loadFragment(fragment);
+                return true;
+        }
+        return false;
+    };
 
     //
     private void loadFragment(Fragment fragment) {
@@ -102,9 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     //-------------------------------------------------------------------------------------------//
-    private boolean checkMapServices(){
-        if(isServicesOK()){
-            if(isMapsEnabled()){
+    private boolean checkMapServices() {
+        if (isServicesOK()) {
+            if (isMapsEnabled()) {
                 return true;
             }
         }
@@ -125,10 +125,10 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
 
-    public boolean isMapsEnabled(){
-        final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
+    public boolean isMapsEnabled() {
+        final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+        if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();
             return false;
         }
@@ -153,22 +153,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public boolean isServicesOK(){
+    public boolean isServicesOK() {
         Log.d(TAG, "isServicesOK: checking google services version");
 
         int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
 
-        if(available == ConnectionResult.SUCCESS){
+        if (available == ConnectionResult.SUCCESS) {
             //everything is fine and the user can make map requests
             Log.d(TAG, "isServicesOK: Google Play Services is working");
             return true;
-        }
-        else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
+        } else if (GoogleApiAvailability.getInstance().isUserResolvableError(available)) {
             //an error occured but we can resolve it
             Log.d(TAG, "isServicesOK: an error occured but we can fix it");
             Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(MainActivity.this, available, ERROR_DIALOG_REQUEST);
             dialog.show();
-        }else{
+        } else {
             Toast.makeText(this, "You can't make map requests", Toast.LENGTH_SHORT).show();
         }
         return false;
@@ -196,10 +195,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onActivityResult: called.");
         switch (requestCode) {
             case PERMISSIONS_REQUEST_ENABLE_GPS: {
-                if(mLocationPermissionGranted){
+                if (mLocationPermissionGranted) {
                     //getChatrooms();
-                }
-                else{
+                } else {
                     getLocationPermission();
                 }
             }

@@ -30,8 +30,8 @@ public class SplashActivity extends AppCompatActivity {
                             }
                             waited += 100;
                         }
-
-                      if (!BaseApplication.getInstance().sharedPreferencesUtils.getAccessToken().equals("")) {
+                        UbookHelper.changeLanguage(BaseApplication.getInstance().sharedPreferencesUtils.getLanguageCode(), SplashActivity.this);
+                        if (!BaseApplication.getInstance().sharedPreferencesUtils.getAccessToken().equals("")) {
                             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

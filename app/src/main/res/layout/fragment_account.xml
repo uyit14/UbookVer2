@@ -1,92 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".account.AccountFragment">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/llInforUser"
-        android:layout_margin="8dp"
-        android:padding="8dp"
-        android:gravity="center|left"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/icon_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <LinearLayout
-            android:gravity="center|left"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-            <TextView
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="Leo Messi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:textSize="14sp"
-                android:textColor="#0065B9"
-                android:text="@string/account_detail"
-                android:textStyle="italic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/llOption"
-        android:layout_margin="8dp"
-        android:layout_below="@+id/llInforUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:padding="4dp"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbNotify"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="Ngôn ngữ"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:gravity="center|right"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorApp"
+            app:title="@string/account"></android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/llInforUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tbNotify"
+            android:layout_margin="8dp"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
             <ImageView
-                android:layout_gravity="center|right"
-                android:src="@drawable/ic_navigate_next_black_24dp"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_avatar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leo Messi"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_detail"
+                    android:textColor="#0065B9"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <!--sign out button-->
-    <LinearLayout
-        android:layout_below="@+id/llOption"
-        android:layout_marginTop="12dp"
-        android:id="@+id/llSignOut"
-        android:background="@color/bgSignoutButton"
-        android:layout_width="match_parent"
-        android:layout_height="45dp">
-        <TextView
-            android:textColor="@color/bgTabActive"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:text="@string/sign_out"
+
+        <LinearLayout
+            android:id="@+id/llOption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llInforUser"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:id="@+id/llLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/language"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:src="@drawable/ic_navigate_next_black_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--sign out button-->
+        <LinearLayout
+            android:id="@+id/llSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/llOption"
+            android:layout_marginTop="12dp"
+            android:background="@color/bgSignoutButton">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/sign_out"
+                android:textColor="@color/bgTabActive"
+                android:textSize="16sp" />
+        </LinearLayout>
     </RelativeLayout>
 
 </ScrollView>

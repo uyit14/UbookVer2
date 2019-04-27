@@ -3,8 +3,10 @@ package com.ubook.ubookapp.notify;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,8 @@ public class NotifyFragment extends Fragment {
 
     @BindView(R.id.rvNotify)
     RecyclerView rvNotify;
+    @BindView(R.id.tbNotify)
+    Toolbar tbNotify;
 
     //
     NotifyAdapter notifyAdapter;

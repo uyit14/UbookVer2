@@ -17,7 +17,7 @@
         android:id="@+id/menu_notify"
         android:enabled="true"
         android:icon="@drawable/ic_live_help_black_24dp"
-        android:title="@string/help"
+        android:title="@string/notify"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_account"

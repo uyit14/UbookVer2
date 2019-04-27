@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Ubook</string>
+    <string name="app_name" translatable="false">Ubook</string>
     <string name="google_map_api_key" translatable="false">AIzaSyAVRS_ZQZCiHMvnGhwUNU9wo8MpvSCWr6s</string>
     //signin
     <string name="start_trying_ubook">Bắt đầu trải nghiệm cùng Ubook</string>
     <string name="your_phone_number">Số điện thoại của bạn</string>
-    <string name="accept">Tôi đồng ý với</string>
+    <string name="accept">Tôi đồng ý với </string>
     <string name="terms_and_conditions">điều kiện và điều khoản sử dụng</string>
     <string name="continues">Tiếp tục</string>
     //verify
@@ -15,10 +15,11 @@
     //main bottom navigation tab
     <string name="home">Trang chủ</string>
     <string name="order">Các đơn hàng</string>
-    <string name="help">Thông báo</string>
+    <string name="notify">Thông báo</string>
     <string name="account">Tài khoản</string>
 
     //tab account
     <string name="account_detail">Chi tiết tài khoản</string>
+    <string name="language">Ngôn ngữ</string>
     <string name="sign_out">Đăng xuất</string>
 </resources>

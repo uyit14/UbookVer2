@@ -50,7 +50,7 @@ public class VerifyActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //
         String phoneNumber = getIntent().getStringExtra("PHONE_NUMBER");
-        if(phoneNumber!=null){
+        if (phoneNumber != null) {
             tvPhoneNumber.setText(phoneNumber);
         }
         HandleEnterCode();
@@ -187,7 +187,7 @@ public class VerifyActivity extends AppCompatActivity {
 
     //onClick event
     @OnClick(R.id.btSubmit)
-    public void onSubmit(){
+    public void onSubmit() {
         Intent intent = new Intent(this, MainActivity.class);
         BaseApplication.getInstance().sharedPreferencesUtils.setAccessToken("access_token");
         startActivity(intent);
