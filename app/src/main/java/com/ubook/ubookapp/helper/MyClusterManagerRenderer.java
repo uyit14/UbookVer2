@@ -14,7 +14,7 @@ import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 import com.google.maps.android.ui.IconGenerator;
 import com.ubook.ubookapp.R;
-import com.ubook.ubookapp.model.ClusterMarker;
+import com.ubook.ubookapp.network.model.ClusterMarker;
 
 public class MyClusterManagerRenderer extends DefaultClusterRenderer<ClusterMarker> {
      private final IconGenerator iconGenerator;

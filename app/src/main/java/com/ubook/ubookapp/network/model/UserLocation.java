@@ -1,4 +1,4 @@
-package com.ubook.ubookapp.model;
+package com.ubook.ubookapp.network.model;
 
 public class UserLocation {
     private String name;

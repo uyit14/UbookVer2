@@ -1,4 +1,4 @@
-package com.ubook.ubookapp;
+package com.ubook.ubookapp.verifysmscode;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,15 +16,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ubook.ubookapp.MainActivity;
+import com.ubook.ubookapp.R;
+import com.ubook.ubookapp.base.BaseActivity;
 import com.ubook.ubookapp.base.BaseApplication;
 import com.ubook.ubookapp.helper.CustomFocusChangeListener;
 import com.ubook.ubookapp.helper.UbookHelper;
+import com.ubook.ubookapp.network.model.VerifySmsCode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class VerifyActivity extends AppCompatActivity {
+public class VerifyActivity extends BaseActivity implements IVerify.View {
     @BindView(R.id.edt01)
     EditText edt01;
     @BindView(R.id.edt02)
@@ -39,6 +44,10 @@ public class VerifyActivity extends AppCompatActivity {
 
     //
     private EditText[] editTexts;
+    VerifyPresenter verifyPresenter;
+    String phoneNumber;
+    String verifyToken;
+    String pinCode="";
 
 
     @Override
@@ -52,8 +61,10 @@ public class VerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify);
         ButterKnife.bind(this);
+        verifyPresenter = new VerifyPresenter(this);
         //
-        String phoneNumber = getIntent().getStringExtra("PHONE_NUMBER");
+         phoneNumber = getIntent().getStringExtra("PHONE_NUMBER");
+         verifyToken = getIntent().getStringExtra("VERIFY_TOKEN");
         if (phoneNumber != null) {
             tvPhoneNumber.setText(phoneNumber);
         }
@@ -97,6 +108,20 @@ public class VerifyActivity extends AppCompatActivity {
         edt02.setOnFocusChangeListener(new CustomFocusChangeListener(edt02, this));
         edt03.setOnFocusChangeListener(new CustomFocusChangeListener(edt03, this));
         edt04.setOnFocusChangeListener(new CustomFocusChangeListener(edt04, this));
+    }
+
+    @Override
+    public void verifySuccess(VerifySmsCode verifySmsCode) {
+        if(verifySmsCode!=null){
+            Intent intent = new Intent(this, MainActivity.class);
+            BaseApplication.getInstance().sharedPreferencesUtils.setAccessToken(verifySmsCode.getAccessToken());
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void verifyFail(String messageError) {
+        showDialogError(541, messageError);
     }
 
     //
@@ -192,8 +217,7 @@ public class VerifyActivity extends AppCompatActivity {
     //onClick event
     @OnClick(R.id.btSubmit)
     public void onSubmit() {
-        Intent intent = new Intent(this, MainActivity.class);
-        BaseApplication.getInstance().sharedPreferencesUtils.setAccessToken("access_token");
-        startActivity(intent);
+        pinCode = edt01.getText().toString() + edt02.getText().toString() + edt03.getText().toString() + edt04.getText().toString();
+        verifyPresenter.requestVerifySmsCode(verifyToken, pinCode);
     }
 }

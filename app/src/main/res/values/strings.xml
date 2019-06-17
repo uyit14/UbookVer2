@@ -25,4 +25,23 @@
 
     //tab home
     <string name="enter_your_location_you_want_arrive">Nhập địa chỉ tại đây</string>
+
+    <!--Base-->
+    <string name="loading">Đang tải...</string>
+    <string name="error_internet">Kiểm tra kết nối mạng!</string>
+    <!--End base-->
+
+    <!-- Dialog message start-->
+    <string name="dialog_title">Thông báo</string>
+    <string name="signin_loading">Đang tải...</string>
+    <string name="dialog_button_confirm_no">Không</string>
+    <string name="dialog_button_confirm_yes">Có</string>
+    <string name="dialog_button_close">Đóng</string>
+    <!-- Dialog message end-->
+
+    <!--SignIn-->
+    <string name="phone_number_must_not_be_blank">Số điện thoại không thể bỏ trống</string>
+
+    <string name="error_401"></string>
+    <string name="error_404"></string>
 </resources>

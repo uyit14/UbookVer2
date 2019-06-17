@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.ubook.ubookapp.base.BaseApplication;
 import com.ubook.ubookapp.MainActivity;
 import com.ubook.ubookapp.R;
-import com.ubook.ubookapp.SignInActivity;
+import com.ubook.ubookapp.signin.SignInActivity;
 import com.ubook.ubookapp.helper.UbookHelper;
 
 public class SplashActivity extends AppCompatActivity {

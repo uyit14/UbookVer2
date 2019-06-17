@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_37sdp"
+        android:layout_marginRight="@dimen/_37sdp"
+        android:background="@drawable/dialog_box"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingTop="@dimen/_20sdp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_login"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/textview_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/progress"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_37sdp"
+            android:layout_toEndOf="@+id/progress"
+            android:text="@string/dialog_title"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/_12sdp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.ubook.ubookapp.base.BaseApplication;
 import com.ubook.ubookapp.R;
-import com.ubook.ubookapp.SignInActivity;
+import com.ubook.ubookapp.signin.SignInActivity;
 import com.ubook.ubookapp.helper.UbookHelper;
 
 import butterknife.BindView;

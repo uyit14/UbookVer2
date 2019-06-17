@@ -18,12 +18,14 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.maps.android.clustering.ClusterManager;
 import com.ubook.ubookapp.R;
+import com.ubook.ubookapp.base.BaseFragment;
 import com.ubook.ubookapp.helper.MyClusterManagerRenderer;
-import com.ubook.ubookapp.model.ClusterMarker;
-import com.ubook.ubookapp.model.UserLocation;
+import com.ubook.ubookapp.helper.UbookHelper;
+import com.ubook.ubookapp.network.model.ClusterMarker;
+import com.ubook.ubookapp.network.model.ListShops;
+import com.ubook.ubookapp.network.model.UserLocation;
 
 import java.util.ArrayList;
 
@@ -33,7 +35,7 @@ import butterknife.ButterKnife;
 import static com.ubook.ubookapp.utils.Constants.MAPVIEW_BUNDLE_KEY;
 
 
-public class HomeFragment extends Fragment implements OnMapReadyCallback {
+public class HomeFragment extends BaseFragment implements OnMapReadyCallback, IHome.View {
 
     @BindView(R.id.mvUbook)
     MapView mvUbook;
@@ -47,6 +49,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     private ArrayList<ClusterMarker> mClusterMarkers = new ArrayList<>();
     private UserLocation mUserPosition;
     private LatLngBounds mMapBoundary;
+    private HomePresenter homePresenter;
 
 
     public HomeFragment() {
@@ -58,11 +61,28 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        homePresenter = new HomePresenter(this);
+        homePresenter.requestGetShopByLocation(0,0,0, 10.8041983, 106.7199983, UbookHelper.getTimezone());
         initData();
         ButterKnife.bind(this, view);
         initMapView(savedInstanceState);
         searchLocation();
         return view;
+    }
+
+    @Override
+    protected View onCreateView(LayoutInflater inflater, ViewGroup container) {
+        return null;
+    }
+
+    @Override
+    protected void setDataToUI() {
+
+    }
+
+    @Override
+    public void addActionClickListener() {
+
     }
 
     private void initData() {
@@ -223,6 +243,11 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     }
 
     @Override
+    protected void initPresenter() {
+
+    }
+
+    @Override
     public void onMapReady(GoogleMap googleMap) {
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -238,5 +263,20 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         mGoogleMap = googleMap;
         addMapMarker();
         googleMap.setMyLocationEnabled(true);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public void getShopByLocationSuccess(ListShops listShops) {
+
+    }
+
+    @Override
+    public void getShopByLocationFail(String messageError) {
+
     }
 }

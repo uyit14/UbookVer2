@@ -27,8 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VerifyActivity" />
-        <activity android:name=".SignInActivity">
+        <activity android:name=".verifysmscode.VerifyActivity" />
+        <activity android:name=".signin.SignInActivity">
 
         </activity>
         <activity android:name=".MainActivity"/>

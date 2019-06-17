@@ -1,4 +1,4 @@
-package com.ubook.ubookapp.model;
+package com.ubook.ubookapp.network.model;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.clustering.ClusterItem;

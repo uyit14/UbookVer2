@@ -5,9 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
+import android.text.TextUtils;
 import android.view.inputmethod.InputMethodManager;
 
+import com.ubook.ubookapp.utils.Constants;
+
+import java.util.Calendar;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class UbookHelper {
     public static void hideSoftKeyboard(Activity activity) {
@@ -68,5 +73,22 @@ public class UbookHelper {
         Intent intent = activity.getIntent();
         activity.finish();
         activity.startActivity(intent);
+    }
+
+    public static String createTokenHeader(String accessToken) {
+        if (TextUtils.isEmpty(accessToken)) {
+            return "";
+        }
+        return String.format("%s %s", Constants.JUCETK, accessToken);
+    }
+
+    public static String getTimezone() {
+        try {
+            Calendar calendar = Calendar.getInstance();
+            TimeZone timeZone = calendar.getTimeZone();
+            return timeZone.getID();
+        } catch (Exception e) {
+            return "";
+        }
     }
 }

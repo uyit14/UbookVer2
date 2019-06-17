@@ -27,4 +27,20 @@
     //tab home
     <string name="enter_your_location_you_want_arrive">Enter address here</string>
 
+    <!--Base-->
+    <string name="loading">Loading...</string>
+    <string name="error_internet">Please check internet connection</string>
+    <!--End base-->
+
+    <!-- Dialog message start-->
+    <string name="dialog_title">Message</string>
+    <string name="signin_loading">Loading...</string>
+    <string name="dialog_button_confirm_no">No</string>
+    <string name="dialog_button_confirm_yes">Yes</string>
+    <string name="dialog_button_close">Close</string>
+    <!-- Dialog message end-->
+
+    <!--SignIn-->
+    <string name="phone_number_must_not_be_blank">Phone number must not be blank</string>
+
 </resources>
