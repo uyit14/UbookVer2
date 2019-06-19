@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "481420464147-cgl901dtlrtpip6o1u6k38583uuorr8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ubook.ubookapp",
+            "certificate_hash": "133cb7f93379386d16c51b5fc6c3176b2a2af75c"
+          }
+        },
+        {
           "client_id": "481420464147-mglblnb2sb825gju3bufl2q74m8tn4hg.apps.googleusercontent.com",
           "client_type": 3
         }

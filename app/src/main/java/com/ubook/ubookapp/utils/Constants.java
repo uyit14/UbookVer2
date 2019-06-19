@@ -1,12 +1,12 @@
 package com.ubook.ubookapp.utils;
 
 public class Constants {
-    public static final String BASE_URL = "";
+    public static final String BASE_URL = "https://api-dev.juce.net";
     public static final int ERROR_DIALOG_REQUEST = 9001;
     public static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 9002;
     public static final int PERMISSIONS_REQUEST_ENABLE_GPS = 9003;
     public static final String MAPVIEW_BUNDLE_KEY = "MapviewBundleKey";
-    public static final String JUCETK = "";
+    public static final String JUCETK = "Jucetk";
 
     //
     //constants for BasePresenter class
